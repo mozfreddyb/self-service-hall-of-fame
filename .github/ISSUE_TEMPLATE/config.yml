@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: General info about our Security Bug Bounty Program
+    url: https://www.mozilla.org/en-US/security/bug-bounty/ 
+    about: Please read our info pages
+  - name: About our Client Bug Bounty Program
+    url: https://www.mozilla.org/en-US/security/client-bug-bounty/
+    about: Furhter info about ouf Client Bug Bounty Program
+  - name: Web and Services Bug Bounty Program
+    url: https://hackerone.com/mozilla
+    about: Our Web and Services Bug Bounty Program is on HackerOne
