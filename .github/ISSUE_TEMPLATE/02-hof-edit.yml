@@ -46,4 +46,4 @@ body:
       label: Your Affiliations
       description: This name will show up after the entry, in case you want to claim group affiliation or mention your employer.
     validations:
-      required: true
+      required: false
