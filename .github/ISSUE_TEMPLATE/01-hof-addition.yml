@@ -1,65 +1,49 @@
-name: Bug Report
-description: File a bug report.
-title: "[Bug]: "
-labels: ["bug", "triage"]
-projects: ["octo-org/1", "octo-org/44"]
-assignees:
-  - octocat
+name: Adding an entry
+description: Add your name and bug info for the Mozilla Security Hall of Fame
+title: "[Addition]: "
+labels: ["add-entry", "triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+        Thanks for finding bugs in Mozilla's software!
+ - type: dropdown
+    id: bug-type
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: bug-type
+      description: Which report type do you want to link to?
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - Bugzilla
+        - Hacker One
       default: 0
     validations:
       required: true
-  - type: dropdown
-    id: browsers
+  - type: input
+    id: bug-info
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
+      label: Bug Information
+      description: For which bug do you want to claim an addition to our Hall of Fame?
+      placeholder: ex. https://bugzilla.mozilla.org/show_bug.cgi?id=1234 or https://hackerone.com/reports/2382484
+    validations:
+      required: false
+  - type: input
+    id: reporter-name
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
+      label: Your Name
+      description: This name will show up on our hall of fame web page.
+    validations:
+      required: true
+- type: input
+    id: reporter-url
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
-
+      label: Your Homepage
+      description: This URL will be used to linkify your name. Use a social profile or your personal home page.
+    validations:
+      required: false
+- type: input
+    id: reporter-org
+    attributes:
+      label: Your Affiliations
+      description: This name will show up after the entry, in case you want to claim group affiliation or mention your employer.
+    validations:
+      required: true
